@@ -11,7 +11,7 @@ PlayerSettings:
   targetResolution: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: UniRogue
+  productName: UnitRogue2
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   defaultScreenWidth: 1024
@@ -74,7 +74,9 @@ PlayerSettings:
     16:9: 1
     Others: 1
   iPhoneBundleIdentifier: com.Company.ProductName
-  productGUID: 1c3df4ebbde1fe043a2140ef35bfbd89
+  metroEnableIndependentInputSource: 0
+  metroEnableLowLatencyPresentationAPI: 0
+  productGUID: 2f46549aa09062146b9470e0a46cff53
   iPhoneBundleVersion: 1.0
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 9
@@ -147,7 +149,7 @@ PlayerSettings:
   flashStrippingLevel: 2
   spritePackerPolicy: 
   scriptingDefineSymbols: {}
-  metroPackageName: UniRogue
+  metroPackageName: UnitRogue2
   metroPackageLogo: 
   metroPackageVersion: 
   metroCertificatePath: 
@@ -155,7 +157,7 @@ PlayerSettings:
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: UniRogue
+  metroApplicationDescription: UnitRogue2
   metroTileLogo: 
   metroTileWideLogo: 
   metroTileSmallLogo: 
@@ -168,6 +170,7 @@ PlayerSettings:
   metroSplashScreenBackgroundColor: {r: 0, g: 0, b: 0, a: 1}
   metroSplashScreenUseBackgroundColor: 0
   metroCapabilities: {}
+  metroUnprocessedPlugins: []
   metroCompilationOverrides: 1
   blackberryDeviceAddress: 
   blackberryDevicePassword: 
