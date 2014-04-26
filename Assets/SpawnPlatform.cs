@@ -5,7 +5,7 @@ public class SpawnPlatform : MonoBehaviour {
 
     public Transform spawnPoint;
     public Warp warp;
-    public GameObject[] platformPrefabs;
+    public GameObject[] platforms;
 
 	// Use this for initialization
 	void Start () {
@@ -19,13 +19,16 @@ public class SpawnPlatform : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-        GameObject newPlatform = (GameObject)Instantiate(platformPrefabs[0], spawnPoint.position, Quaternion.identity);
+        GameObject newPlatform = (GameObject)Instantiate(platforms[0], spawnPoint.position, Quaternion.identity);
 
         Warp otherWarp = newPlatform.GetComponentInChildren<Warp>();
 
         if (otherWarp != null)
         {
-            GameObject warpPoint = (GameObject)Instantiate(new GameObject("warpPoint"), otherWarp.transform.position, Quaternion.identity);
+
+            GameObject warpPoint = new GameObject("spawnedWarpPoint");
+            warpPoint.transform.position = otherWarp.transform.position;
+            warpPoint.transform.parent = otherWarp.gameObject.transform;
             warpPoint.transform.Translate(0, 1, -10);
             warp.warpTransform = warpPoint.transform;
         }
