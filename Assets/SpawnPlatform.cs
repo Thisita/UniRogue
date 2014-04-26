@@ -34,4 +34,9 @@ public class SpawnPlatform : MonoBehaviour {
         }
         
     }
+
+    void OnTriggerExit(Collider other)
+    {
+        Destroy(gameObject);
+    }
 }
