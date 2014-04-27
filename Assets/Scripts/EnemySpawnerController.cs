@@ -4,7 +4,7 @@ using System.Collections;
 public class EnemySpawnerController : MonoBehaviour
 {
     // Enemies to randomly be spawned
-    public Transform[] enemies;
+    public GameObject[] enemies;
     // Delta between spawns
     public float delta = 30.0f;
 
@@ -14,17 +14,20 @@ public class EnemySpawnerController : MonoBehaviour
     void Start()
     {
         // set lastTime
-        lastTime = Time.time;
+        lastTime = 0;
     }
 	
 	// Update is called once per frame
 	void Update()
     {
+        lastTime += Time.deltaTime;
         // Test if it is a spawn time
-        if ((Time.time - lastTime) >= delta)
+        if (lastTime >= delta)
         {
+            Debug.Log("Spawning Enemy");
+            lastTime = 0;
             // instantiate a new object at the spawner
-            Instantiate(enemies[Random.Range(0, enemies.Length)], new Vector3(0, 0, 0), Quaternion.identity);
+            Instantiate(enemies[Random.Range(0, enemies.Length)], transform.position, Quaternion.identity);
         }
 	}
 }
