@@ -28,5 +28,10 @@ public class PlayerHealth : MonoBehaviour {
     {
         gameManager.SetGameState(GameManager.GameState.GameOver);
     }
+
+    void OnGUI()
+    {
+        GUI.Box(new Rect(10, 10, 60, 20), currentHealth + "/" + playerHealth);
+    }
 	
 }

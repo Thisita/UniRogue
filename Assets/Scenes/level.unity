@@ -653,6 +653,7 @@ GameObject:
   - 114: {fileID: 971175978}
   - 114: {fileID: 971175977}
   - 114: {fileID: 971175981}
+  - 114: {fileID: 971175982}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -790,6 +791,18 @@ MonoBehaviour:
   gunFireFx: {fileID: 100004, guid: de71c27dabe650a46a35e0cd17c94083, type: 2}
   firePos: {fileID: 358875341}
   fireRate: .5
+--- !u!114 &971175982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 971175975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82ed30a1b9bf48a41925d1863e4f9dce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealth: 100
 --- !u!1 &1124935334
 GameObject:
   m_ObjectHideFlags: 0
