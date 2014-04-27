@@ -14,7 +14,7 @@ public class PlayerHealth : MonoBehaviour {
         currentHealth = playerHealth;
 	}
 
-    void TakeDamage(float amt)
+    public void TakeDamage(float amt)
     {
         currentHealth -= amt;
 
@@ -27,6 +27,11 @@ public class PlayerHealth : MonoBehaviour {
     void Die()
     {
         gameManager.SetGameState(GameManager.GameState.GameOver);
+    }
+
+    void OnGUI()
+    {
+        GUI.Box(new Rect(10, 10, 60, 20), currentHealth + "/" + playerHealth);
     }
 	
 }
