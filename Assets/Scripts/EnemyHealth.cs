@@ -30,5 +30,16 @@ public class EnemyHealth : MonoBehaviour {
             gameManager.DecreaseEnemies(1);
         Destroy(gameObject);
     }
+
+    void OnGUI()
+    {
+        Vector3 targetPos;
+        targetPos = Camera.main.WorldToScreenPoint(transform.position);
+
+        if (targetPos.z > 0)
+        {
+            GUI.Box(new Rect(targetPos.x, Screen.height - targetPos.y, 60, 20), currentHitPoints + "/" + hitPoints);
+        }
+    }
 	
 }
