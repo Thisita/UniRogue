@@ -5,20 +5,26 @@ public class Warp : MonoBehaviour {
 
     public Transform warpTransform;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+    GameManager gameManager;
+
+    void Start()
+    {
+        // There should only be one game manager
+        gameManager = GameObject.FindObjectOfType<GameManager>();
+    }
+
+    void Update()
+    {
+
+    }
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Entered Trigger");
+        if (gameManager.GetNumEneimesToKill() == 0)
+        {
+            Debug.Log("Entered Trigger");
 
-        other.transform.position = warpTransform.position;
+            other.transform.position = warpTransform.position;
+        }
     }
 }

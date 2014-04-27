@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class EnemySpawnerController : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class EnemySpawnerController : MonoBehaviour
 
     float lastTime;
 
+    GameManager gameManager;
+
     // Start is caled at first run
     void Start()
     {
@@ -19,6 +22,8 @@ public class EnemySpawnerController : MonoBehaviour
         Debug.Log("EnemySpawnController::Start()");
         // set lastTime
         lastTime = 0.0f;
+
+        gameManager = GameObject.FindObjectOfType<GameManager>();
     }
 	
 	// Update is called once per frame
@@ -34,7 +39,7 @@ public class EnemySpawnerController : MonoBehaviour
             // Reset timer
             lastTime = 0.0f;
             // instantiate a new object at the spawner
-            GameObject.Instantiate(enemies[Random.Range(0, enemies.Length)], transform.position, Quaternion.identity);
+            Instantiate(enemies[Random.Range(0, enemies.Length)], transform.position, Quaternion.identity);
             enemyCount--;
         }
 	}
