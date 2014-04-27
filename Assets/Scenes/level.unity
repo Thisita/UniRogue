@@ -556,10 +556,10 @@ Transform:
   m_LocalPosition: {x: 128.5448, y: -3.74739456, z: -10.7948923}
   m_LocalScale: {x: 55.4794388, y: 3.03046203, z: 63.8333397}
   m_Children:
-  - {fileID: 1987260407}
-  - {fileID: 766708781}
-  - {fileID: 105397657}
   - {fileID: 773373625}
+  - {fileID: 1987260407}
+  - {fileID: 105397657}
+  - {fileID: 766708781}
   - {fileID: 1310012088}
   - {fileID: 1529644799}
   m_Father: {fileID: 0}
@@ -1121,6 +1121,18 @@ Prefab:
     - target: {fileID: 100002, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}

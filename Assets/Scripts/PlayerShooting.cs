@@ -9,12 +9,19 @@ public class PlayerShooting : MonoBehaviour {
     public float fireRate = 0.5f;
     float cooldown = 0;
 
+    GameManager gameManager;
+
+    void Start()
+    {
+        gameManager = GameObject.FindObjectOfType<GameManager>();
+    }
+
 	// Update is called once per frame
 	void Update () {
 
         cooldown -= Time.deltaTime;
 
-        if(Input.GetButton("Fire1"))
+        if(Input.GetButton("Fire1") && gameManager.GetGameState() == GameManager.GameState.Playing)
         {
             Fire();
         }
