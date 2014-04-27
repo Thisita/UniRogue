@@ -21,7 +21,8 @@ public class EnemySpawnerController : MonoBehaviour
         // log
         Debug.Log("EnemySpawnController::Start()");
         // set lastTime
-        lastTime = 0.0f;
+        // Make the spawner spawn the first set of enemies instantly
+        lastTime = delta;
 
         gameManager = GameObject.FindObjectOfType<GameManager>();
     }
