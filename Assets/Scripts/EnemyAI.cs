@@ -18,7 +18,7 @@ public class EnemyAI : MonoBehaviour
             Debug.Log("EnemyAI::Start()");
         }
         // Get the player
-        player = GameObject.FindGameObjectWithTag("player");
+        player = GameObject.FindGameObjectWithTag("Player");
 	}
 	
 	// Update is called once per frame
