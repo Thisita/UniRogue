@@ -19,7 +19,6 @@ public class EnableSpawners : MonoBehaviour {
             foreach (EnemySpawnerController spawner in spawners)
             {
                 spawner.enabled = true;
-                gameManager.IncreaseEnemies(spawner.enemyCount);
             }
         }
     }

@@ -28,7 +28,7 @@ public class EnemyAI : MonoBehaviour
         if (Vector3.Distance(transform.position, player.transform.position) >= minDistance)
         {
             // log
-            Debug.Log("EnemyAI::Update() [Chasing]");
+            //Debug.Log("EnemyAI::Update() [Chasing]");
             // chase
             transform.position += transform.forward * moveSpeed * Time.deltaTime;
 
@@ -36,7 +36,7 @@ public class EnemyAI : MonoBehaviour
             if (Vector3.Distance(transform.position, player.transform.position) <= maxDistance)
             {
                 // log
-                Debug.Log("EnemyAI::Update() [Attacking]");
+                //Debug.Log("EnemyAI::Update() [Attacking]");
                 // attack
                 Attack();
             }
@@ -47,7 +47,7 @@ public class EnemyAI : MonoBehaviour
     void Attack()
     {
         // log
-        Debug.Log("EnemyAI::Attack()");
+        //Debug.Log("EnemyAI::Attack()");
         // TODO: Implement
     }
 }

@@ -9,7 +9,10 @@ public class EnemySpawnerController : MonoBehaviour
     // Delta between spawns
     public float delta = 30.0f;
     // Number of enemies to be spawn
-    public int enemyCount = 5;
+    public int minEnemyCount = 1;
+    public int maxEnemyCount = 5;
+
+    int enemyCount;
 
     float lastTime;
 
@@ -21,11 +24,14 @@ public class EnemySpawnerController : MonoBehaviour
         // log
         Debug.Log("EnemySpawnController::Start()");
         // set lastTime
-        // Make the spawner spawn the first set of enemies instantly
-        lastTime = delta;
+        // Make the spawner spawn the first set of almost enemies instantly
+        lastTime = delta - 1;
 
         // Get the game manager
         gameManager = GameObject.FindObjectOfType<GameManager>();
+
+        enemyCount = Random.Range(minEnemyCount, maxEnemyCount);
+        gameManager.IncreaseEnemies(enemyCount);
     }
 	
 	// Update is called once per frame
@@ -51,5 +57,10 @@ public class EnemySpawnerController : MonoBehaviour
         // instantiate a new object at the spawner
         Instantiate(enemies[Random.Range(0, enemies.Length)], transform.position, Quaternion.identity);
         enemyCount--;
+    }
+
+    public int GetEnemyCount()
+    {
+        return enemyCount;
     }
 }
