@@ -235,7 +235,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 400002}
   warp: {fileID: 11400002}
   platforms:
-  - {fileID: 100000}
+  - {fileID: 100000, guid: 05e9c9c7b78251941a9cafb06f52d9ea, type: 2}
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1

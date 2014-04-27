@@ -14,7 +14,7 @@ GameObject:
   - 65: {fileID: 6500000}
   - 114: {fileID: 11400000}
   m_Layer: 0
-  m_Name: platformPrefab
+  m_Name: platformPrefab 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -235,7 +235,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 400002}
   warp: {fileID: 11400002}
   platforms:
-  - {fileID: 100000}
+  - {fileID: 100000, guid: 01812fa23fb2c914689f8504b2a38811, type: 2}
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
