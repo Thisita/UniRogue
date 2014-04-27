@@ -86,4 +86,16 @@ public class GameManager : MonoBehaviour {
     {
         this.state = state;
     }
+
+    void OnGUI()
+    {
+        if (eneimesToKill == 0)
+        {
+            GUI.Box(new Rect((Screen.width / 2) - 200, 30, 200, 25), "Warp has Activated!");
+        }
+        else
+        {
+            GUI.Box(new Rect((Screen.width / 2) - 200, 30, 200, 25), "Enemies Left to kill: " + eneimesToKill);
+        }
+    }
 }
