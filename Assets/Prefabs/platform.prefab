@@ -819,8 +819,12 @@ MonoBehaviour:
   spawnPoint: {fileID: 400016}
   warp: {fileID: 11400010}
   platforms:
-  - {fileID: 100000, guid: 01812fa23fb2c914689f8504b2a38811, type: 2}
-  - {fileID: 0}
+  - {fileID: 100012, guid: c8a837ccfc7d4ce4d879b427ed5e5954, type: 2}
+  - {fileID: 100020, guid: d091eceb796951b418815be498f13c89, type: 2}
+  - {fileID: 100040, guid: a488c480b8a3409499cc7ee30c34679e, type: 2}
+  - {fileID: 100040, guid: 18c9abb2485f9574c84f120b1cf6f118, type: 2}
+  - {fileID: 100064, guid: 7c70ea116fccca64ca122926294c7dbb, type: 2}
+  - {fileID: 100078, guid: 87583fd16aebbe44a918bf86621d20df, type: 2}
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
