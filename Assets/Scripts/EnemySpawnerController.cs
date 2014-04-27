@@ -29,8 +29,6 @@ public class EnemySpawnerController : MonoBehaviour
         {
             // log
             Debug.Log("EnemySpawnController::Update() [Instantiating]");
-            // Reset timer
-            lastTime = 0.0f;
             // instantiate a new object at the spawner
             GameObject.Instantiate(enemies[Random.Range(0, enemies.Length)], transform.position, Quaternion.identity);
         }
