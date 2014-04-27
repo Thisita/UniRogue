@@ -21,7 +21,8 @@ public class SpawnPlatform : MonoBehaviour {
     {
         if (other.tag == "Player")
         {
-            GameObject newPlatform = (GameObject)Instantiate(platforms[0], spawnPoint.position, Quaternion.identity);
+            int index = Random.Range(0, platforms.Length);
+            GameObject newPlatform = (GameObject)Instantiate(platforms[index], spawnPoint.position, Quaternion.identity);
 
             Warp otherWarp = newPlatform.GetComponentInChildren<Warp>();
 
