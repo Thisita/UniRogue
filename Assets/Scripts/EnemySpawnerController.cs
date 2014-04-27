@@ -16,19 +16,21 @@ public class EnemySpawnerController : MonoBehaviour
         // log
         Debug.Log("EnemySpawnController::Start()");
         // set lastTime
-        lastTime = Time.time;
+        lastTime = 0.0f;
     }
 	
 	// Update is called once per frame
 	void Update()
     {
+        // update lastTime
+        lastTime += Time.deltaTime;
         // Test if it is a spawn time
-        if ((Time.time - lastTime) >= delta)
+        if (lastTime >= delta)
         {
             // log
             Debug.Log("EnemySpawnController::Update() [Instantiating]");
             // instantiate a new object at the spawner
-            GameObject.Instantiate(enemies[Random.Range(0, enemies.Length)], new Vector3(0, 0, 0), Quaternion.identity);
+            GameObject.Instantiate(enemies[Random.Range(0, enemies.Length)], transform.position, Quaternion.identity);
         }
 	}
 }
