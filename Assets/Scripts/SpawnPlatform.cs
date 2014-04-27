@@ -19,24 +19,30 @@ public class SpawnPlatform : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-        GameObject newPlatform = (GameObject)Instantiate(platforms[0], spawnPoint.position, Quaternion.identity);
-
-        Warp otherWarp = newPlatform.GetComponentInChildren<Warp>();
-
-        if (otherWarp != null)
+        if (other.tag == "Player")
         {
+            GameObject newPlatform = (GameObject)Instantiate(platforms[0], spawnPoint.position, Quaternion.identity);
 
-            GameObject warpPoint = new GameObject("spawnedWarpPoint");
-            warpPoint.transform.position = otherWarp.transform.position;
-            warpPoint.transform.parent = otherWarp.gameObject.transform;
-            warpPoint.transform.Translate(0, 1, -10);
-            warp.warpTransform = warpPoint.transform;
+            Warp otherWarp = newPlatform.GetComponentInChildren<Warp>();
+
+            if (otherWarp != null)
+            {
+
+                GameObject warpPoint = new GameObject("spawnedWarpPoint");
+                warpPoint.transform.position = otherWarp.transform.position;
+                warpPoint.transform.parent = otherWarp.gameObject.transform;
+                warpPoint.transform.Translate(0, 1, -10);
+                warp.warpTransform = warpPoint.transform;
+            }
         }
         
     }
 
     void OnTriggerExit(Collider other)
     {
-        Destroy(gameObject);
+        if (other.tag == "Player")
+        {
+            Destroy(gameObject);
+        }
     }
 }
