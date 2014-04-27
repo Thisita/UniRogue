@@ -24,6 +24,7 @@ public class EnemySpawnerController : MonoBehaviour
         // Make the spawner spawn the first set of enemies instantly
         lastTime = delta;
 
+        // Get the game manager
         gameManager = GameObject.FindObjectOfType<GameManager>();
     }
 	
@@ -35,13 +36,20 @@ public class EnemySpawnerController : MonoBehaviour
         // Test if it is a spawn time
         if (lastTime >= delta && enemyCount > 0)
         {
-            // log
-            Debug.Log("EnemySpawnController::Update() [Instantiating]");
+            SpawnEnemy();
+
             // Reset timer
             lastTime = 0.0f;
-            // instantiate a new object at the spawner
-            Instantiate(enemies[Random.Range(0, enemies.Length)], transform.position, Quaternion.identity);
-            enemyCount--;
+            
         }
 	}
+
+    void SpawnEnemy()
+    {
+        Debug.Log("EnemySpawnController::SpawnEnemy()");
+
+        // instantiate a new object at the spawner
+        Instantiate(enemies[Random.Range(0, enemies.Length)], transform.position, Quaternion.identity);
+        enemyCount--;
+    }
 }
