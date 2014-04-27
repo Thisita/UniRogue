@@ -6,7 +6,8 @@ public class GameManager : MonoBehaviour {
     public enum GameState
     {
         Paused,
-        Playing
+        Playing,
+        GameOver
     }
 
     int eneimesToKill;
@@ -49,6 +50,11 @@ public class GameManager : MonoBehaviour {
         {
             Time.timeScale = 1.0f;
         }
+
+        if (state == GameState.GameOver)
+        {
+            Application.LoadLevel("level");
+        }
 	}
 
     public int GetNumEneimesToKill()
@@ -74,5 +80,10 @@ public class GameManager : MonoBehaviour {
     public GameObject GetPlayer()
     {
         return player;
+    }
+
+    public void SetGameState(GameState state)
+    {
+        this.state = state;
     }
 }

@@ -6,8 +6,11 @@ public class PlayerHealth : MonoBehaviour {
     public float playerHealth = 100f;
     float currentHealth;
 
+    GameManager gameManager;
+
 	// Use this for initialization
 	void Start () {
+        gameManager = GameObject.FindObjectOfType<GameManager>();
         currentHealth = playerHealth;
 	}
 
@@ -23,7 +26,7 @@ public class PlayerHealth : MonoBehaviour {
 
     void Die()
     {
-
+        gameManager.SetGameState(GameManager.GameState.GameOver);
     }
 	
 }
