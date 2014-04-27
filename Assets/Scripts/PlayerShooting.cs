@@ -3,6 +3,9 @@ using System.Collections;
 
 public class PlayerShooting : MonoBehaviour {
 
+    public GameObject gunFireFx;
+    public Transform firePos;
+
     public float fireRate = 0.5f;
     float cooldown = 0;
 
@@ -34,9 +37,11 @@ public class PlayerShooting : MonoBehaviour {
         {
             Debug.Log("Hit object: " + hitTransform.name);
 
+            GunFireFx(firePos.position, hitPoint);
+
             EnemyHealth objHealth = hitTransform.GetComponent<EnemyHealth>();
  
-            while (objHealth == null || hitTransform.parent != null)
+            while (objHealth == null && hitTransform.parent != null)
             {
                 hitTransform = hitTransform.parent;
                 objHealth = hitTransform.GetComponent<EnemyHealth>();
@@ -46,6 +51,11 @@ public class PlayerShooting : MonoBehaviour {
             {
                 objHealth.TakeDamage(10);
             }
+        }
+        else
+        {
+            hitPoint = firePos.position + (Camera.main.transform.forward * 100f);
+            GunFireFx(firePos.position, hitPoint);
         }
 
         cooldown = fireRate;
@@ -70,5 +80,13 @@ public class PlayerShooting : MonoBehaviour {
         }
 
         return closestHit;
+    }
+
+    void GunFireFx(Vector3 startPos, Vector3 endPos)
+    {
+        GameObject fx = (GameObject)Instantiate(gunFireFx, startPos, Quaternion.LookRotation(endPos - startPos));
+        LineRenderer line = fx.GetComponentInChildren<LineRenderer>();
+        line.SetPosition(0, startPos);
+        line.SetPosition(1, endPos);
     }
 }
