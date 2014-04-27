@@ -19,7 +19,7 @@ RenderSettings:
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientLight: {r: .200000003, g: .200000003, b: .200000003, a: 1}
-  m_SkyboxMaterial: {fileID: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 5aab239cac7fe8a4c931693a7535da5c, type: 2}
   m_HaloStrength: .5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -156,7 +156,8 @@ MonoBehaviour:
   enemies:
   - {fileID: 100766, guid: d95c6f63eaedc7e41a4b2e07d5507a8d, type: 2}
   delta: 10
-  enemyCount: 1
+  minEnemyCount: 1
+  maxEnemyCount: 5
 --- !u!1 &121651585
 GameObject:
   m_ObjectHideFlags: 0
@@ -418,7 +419,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 643813965}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 128.123581, y: .454965591, z: 14.1351938}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -524,7 +525,8 @@ MonoBehaviour:
   enemies:
   - {fileID: 100766, guid: d95c6f63eaedc7e41a4b2e07d5507a8d, type: 2}
   delta: 10
-  enemyCount: 1
+  minEnemyCount: 1
+  maxEnemyCount: 5
 --- !u!1 &769337000
 GameObject:
   m_ObjectHideFlags: 0
@@ -605,7 +607,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a33117956b39d0d4a9e1086b878ecfaf, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -693,7 +695,8 @@ MonoBehaviour:
   enemies:
   - {fileID: 100766, guid: d95c6f63eaedc7e41a4b2e07d5507a8d, type: 2}
   delta: 10
-  enemyCount: 1
+  minEnemyCount: 1
+  maxEnemyCount: 5
 --- !u!1001 &834497673
 Prefab:
   m_ObjectHideFlags: 0
@@ -1036,49 +1039,6 @@ Prefab:
   m_RootGameObject: {fileID: 766708780}
   m_IsPrefabParent: 0
   m_IsExploded: 1
---- !u!1 &1036590419
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 100000, guid: 788427c012914bd4a891fa4f70eff2a3, type: 2}
-  m_PrefabInternal: {fileID: 1999699815}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1036590421}
-  - 114: {fileID: 1036590420}
-  m_Layer: 0
-  m_Name: EnemySpawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1036590420
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: 788427c012914bd4a891fa4f70eff2a3,
-    type: 2}
-  m_PrefabInternal: {fileID: 1999699815}
-  m_GameObject: {fileID: 1036590419}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca7ea92242eeeaf448ebc93fb156cda4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemies:
-  - {fileID: 100766, guid: d95c6f63eaedc7e41a4b2e07d5507a8d, type: 2}
-  delta: 10
-  enemyCount: 5
---- !u!4 &1036590421
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 400000, guid: 788427c012914bd4a891fa4f70eff2a3, type: 2}
-  m_PrefabInternal: {fileID: 1999699815}
-  m_GameObject: {fileID: 1036590419}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
 --- !u!1001 &1127052019
 Prefab:
   m_ObjectHideFlags: 0
@@ -1243,7 +1203,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a33117956b39d0d4a9e1086b878ecfaf, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -1648,51 +1608,8 @@ MonoBehaviour:
   enemies:
   - {fileID: 100766, guid: d95c6f63eaedc7e41a4b2e07d5507a8d, type: 2}
   delta: 10
-  enemyCount: 1
---- !u!1001 &1999699815
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 400000, guid: 788427c012914bd4a891fa4f70eff2a3, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 788427c012914bd4a891fa4f70eff2a3, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 788427c012914bd4a891fa4f70eff2a3, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 788427c012914bd4a891fa4f70eff2a3, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 788427c012914bd4a891fa4f70eff2a3, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 788427c012914bd4a891fa4f70eff2a3, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 788427c012914bd4a891fa4f70eff2a3, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: 788427c012914bd4a891fa4f70eff2a3, type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 788427c012914bd4a891fa4f70eff2a3, type: 2}
-  m_RootGameObject: {fileID: 1036590419}
-  m_IsPrefabParent: 0
-  m_IsExploded: 1
+  minEnemyCount: 1
+  maxEnemyCount: 5
 --- !u!1 &2040206413
 GameObject:
   m_ObjectHideFlags: 0
