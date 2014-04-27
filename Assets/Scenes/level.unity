@@ -155,6 +155,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemies:
   - {fileID: 100766, guid: d95c6f63eaedc7e41a4b2e07d5507a8d, type: 2}
+  - {fileID: 100002, guid: 076699d7a4261f149865f1f3a90067cf, type: 2}
   delta: 10
   minEnemyCount: 1
   maxEnemyCount: 5
@@ -237,6 +238,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 769337001}
     m_Modifications:
+    - target: {fileID: 11400000, guid: 788427c012914bd4a891fa4f70eff2a3, type: 2}
+      propertyPath: enemies.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 788427c012914bd4a891fa4f70eff2a3, type: 2}
       propertyPath: m_LocalPosition.x
       value: .267325521
@@ -285,6 +290,10 @@ Prefab:
       propertyPath: enemyCount
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 788427c012914bd4a891fa4f70eff2a3, type: 2}
+      propertyPath: enemies.Array.data[1]
+      value: 
+      objectReference: {fileID: 100002, guid: 076699d7a4261f149865f1f3a90067cf, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 788427c012914bd4a891fa4f70eff2a3, type: 2}
   m_RootGameObject: {fileID: 773373624}
@@ -430,6 +439,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 769337001}
     m_Modifications:
+    - target: {fileID: 11400000, guid: 788427c012914bd4a891fa4f70eff2a3, type: 2}
+      propertyPath: enemies.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 788427c012914bd4a891fa4f70eff2a3, type: 2}
       propertyPath: m_LocalPosition.x
       value: -.289664984
@@ -478,6 +491,10 @@ Prefab:
       propertyPath: enemyCount
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 788427c012914bd4a891fa4f70eff2a3, type: 2}
+      propertyPath: enemies.Array.data[1]
+      value: 
+      objectReference: {fileID: 100002, guid: 076699d7a4261f149865f1f3a90067cf, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 788427c012914bd4a891fa4f70eff2a3, type: 2}
   m_RootGameObject: {fileID: 1987260406}
@@ -487,7 +504,7 @@ Prefab:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100000, guid: 788427c012914bd4a891fa4f70eff2a3, type: 2}
-  m_PrefabInternal: {fileID: 1004333011}
+  m_PrefabInternal: {fileID: 1133452050}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 766708781}
@@ -503,7 +520,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400000, guid: 788427c012914bd4a891fa4f70eff2a3, type: 2}
-  m_PrefabInternal: {fileID: 1004333011}
+  m_PrefabInternal: {fileID: 1133452050}
   m_GameObject: {fileID: 766708780}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -.333750337, y: 1.64332688, z: .358783841}
@@ -515,7 +532,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400000, guid: 788427c012914bd4a891fa4f70eff2a3,
     type: 2}
-  m_PrefabInternal: {fileID: 1004333011}
+  m_PrefabInternal: {fileID: 1133452050}
   m_GameObject: {fileID: 766708780}
   m_Enabled: 0
   m_EditorHideFlags: 0
@@ -524,6 +541,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemies:
   - {fileID: 100766, guid: d95c6f63eaedc7e41a4b2e07d5507a8d, type: 2}
+  - {fileID: 100002, guid: 076699d7a4261f149865f1f3a90067cf, type: 2}
   delta: 10
   minEnemyCount: 1
   maxEnemyCount: 5
@@ -558,10 +576,10 @@ Transform:
   m_LocalPosition: {x: 128.5448, y: -3.74739456, z: -10.7948923}
   m_LocalScale: {x: 55.4794388, y: 3.03046203, z: 63.8333397}
   m_Children:
-  - {fileID: 773373625}
-  - {fileID: 1987260407}
-  - {fileID: 105397657}
   - {fileID: 766708781}
+  - {fileID: 1987260407}
+  - {fileID: 773373625}
+  - {fileID: 105397657}
   - {fileID: 1310012088}
   - {fileID: 1529644799}
   m_Father: {fileID: 0}
@@ -694,6 +712,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemies:
   - {fileID: 100766, guid: d95c6f63eaedc7e41a4b2e07d5507a8d, type: 2}
+  - {fileID: 100002, guid: 076699d7a4261f149865f1f3a90067cf, type: 2}
   delta: 10
   minEnemyCount: 1
   maxEnemyCount: 5
@@ -704,6 +723,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 769337001}
     m_Modifications:
+    - target: {fileID: 11400000, guid: 788427c012914bd4a891fa4f70eff2a3, type: 2}
+      propertyPath: enemies.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 788427c012914bd4a891fa4f70eff2a3, type: 2}
       propertyPath: m_LocalPosition.x
       value: .267325521
@@ -752,6 +775,10 @@ Prefab:
       propertyPath: enemyCount
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 788427c012914bd4a891fa4f70eff2a3, type: 2}
+      propertyPath: enemies.Array.data[1]
+      value: 
+      objectReference: {fileID: 100002, guid: 076699d7a4261f149865f1f3a90067cf, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 788427c012914bd4a891fa4f70eff2a3, type: 2}
   m_RootGameObject: {fileID: 105397656}
@@ -979,66 +1006,6 @@ MonoBehaviour:
   gunFireFx: {fileID: 100004, guid: de71c27dabe650a46a35e0cd17c94083, type: 2}
   firePos: {fileID: 358875341}
   fireRate: .5
---- !u!1001 &1004333011
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 769337001}
-    m_Modifications:
-    - target: {fileID: 400000, guid: 788427c012914bd4a891fa4f70eff2a3, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -.333750337
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 788427c012914bd4a891fa4f70eff2a3, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 1.64332688
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 788427c012914bd4a891fa4f70eff2a3, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: .358783841
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 788427c012914bd4a891fa4f70eff2a3, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 788427c012914bd4a891fa4f70eff2a3, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 788427c012914bd4a891fa4f70eff2a3, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 788427c012914bd4a891fa4f70eff2a3, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 788427c012914bd4a891fa4f70eff2a3, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 788427c012914bd4a891fa4f70eff2a3, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 788427c012914bd4a891fa4f70eff2a3, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: 788427c012914bd4a891fa4f70eff2a3, type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: 788427c012914bd4a891fa4f70eff2a3, type: 2}
-      propertyPath: enemyCount
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 788427c012914bd4a891fa4f70eff2a3, type: 2}
-  m_RootGameObject: {fileID: 766708780}
-  m_IsPrefabParent: 0
-  m_IsExploded: 1
 --- !u!1001 &1127052019
 Prefab:
   m_ObjectHideFlags: 0
@@ -1097,6 +1064,46 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
   m_RootGameObject: {fileID: 971175975}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
+--- !u!1001 &1133452050
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 769337001}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 788427c012914bd4a891fa4f70eff2a3, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -.333750337
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 788427c012914bd4a891fa4f70eff2a3, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.64332688
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 788427c012914bd4a891fa4f70eff2a3, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: .358783841
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 788427c012914bd4a891fa4f70eff2a3, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 788427c012914bd4a891fa4f70eff2a3, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 788427c012914bd4a891fa4f70eff2a3, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 788427c012914bd4a891fa4f70eff2a3, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 788427c012914bd4a891fa4f70eff2a3, type: 2}
+  m_RootGameObject: {fileID: 766708780}
   m_IsPrefabParent: 0
   m_IsExploded: 1
 --- !u!1 &1176872050
@@ -1607,6 +1614,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemies:
   - {fileID: 100766, guid: d95c6f63eaedc7e41a4b2e07d5507a8d, type: 2}
+  - {fileID: 100002, guid: 076699d7a4261f149865f1f3a90067cf, type: 2}
   delta: 10
   minEnemyCount: 1
   maxEnemyCount: 5
