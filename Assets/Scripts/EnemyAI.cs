@@ -64,11 +64,18 @@ public class EnemyAI : MonoBehaviour
             return;
         }
 
-        Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
-        Transform hitTransform;
-        Vector3 hitPoint = player.transform.position;
+        float randomRadius = Random.Range(0, 2.0f);
+        float randomAngle = Random.Range(0, 2 * Mathf.PI);
 
-        hitTransform = player.transform;
+        Vector3 direction = new Vector3(randomRadius * Mathf.Cos(randomAngle), randomRadius * Mathf.Sin(randomAngle), 10.0f);
+
+        direction = transform.TransformDirection(direction.normalized);
+
+        Ray ray = new Ray(transform.position, direction);
+        Transform hitTransform;
+        Vector3 hitPoint;
+
+        hitTransform = FindClosestHitObject(ray, out hitPoint);
 
         if (hitTransform != null)
         {
@@ -96,6 +103,27 @@ public class EnemyAI : MonoBehaviour
         }
         // reset the cool down
         cooldown = fireRate;
+    }
+
+    Transform FindClosestHitObject(Ray ray, out Vector3 hitPoint)
+    {
+        RaycastHit[] hits = Physics.RaycastAll(ray);
+
+        Transform closestHit = null;
+        float distance = 0;
+        hitPoint = Vector3.zero;
+
+        foreach (RaycastHit hit in hits)
+        {
+            if (hit.transform != this.transform && (closestHit == null || hit.distance < distance))
+            {
+                closestHit = hit.transform;
+                distance = hit.distance;
+                hitPoint = hit.point;
+            }
+        }
+
+        return closestHit;
     }
 
     void GunFireFx(Vector3 startPos, Vector3 endPos)
