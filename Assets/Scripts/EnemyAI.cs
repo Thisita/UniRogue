@@ -22,7 +22,7 @@ public class EnemyAI : MonoBehaviour
 	void Update()
     {
         // Track the player via rotation
-        transform.LookAt(player.transform);
+        transform.LookAt(new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z));
 
         // should we chase?
         if (Vector3.Distance(transform.position, player.transform.position) >= minDistance)
