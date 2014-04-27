@@ -34,7 +34,18 @@ public class PlayerShooting : MonoBehaviour {
         {
             Debug.Log("Hit object: " + hitTransform.name);
 
-            //Health logic here
+            EnemyHealth objHealth = hitTransform.GetComponent<EnemyHealth>();
+ 
+            while (objHealth == null || hitTransform.parent != null)
+            {
+                hitTransform = hitTransform.parent;
+                objHealth = hitTransform.GetComponent<EnemyHealth>();
+            }
+
+            if (objHealth != null)
+            {
+                objHealth.TakeDamage(10);
+            }
         }
 
         cooldown = fireRate;
