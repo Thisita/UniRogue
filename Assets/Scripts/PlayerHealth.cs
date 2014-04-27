@@ -18,7 +18,7 @@ public class PlayerHealth : MonoBehaviour {
     {
         currentHealth -= amt;
 
-        if (currentHealth <=0 )
+        if (currentHealth <= 0)
         {
             Die();
         }
@@ -31,7 +31,7 @@ public class PlayerHealth : MonoBehaviour {
 
     void OnGUI()
     {
-        GUI.Box(new Rect(10, 10, 60, 20), currentHealth + "/" + playerHealth);
+        GUI.Box(new Rect(10, 10, 160, 25), "Player Health: " + currentHealth + "/" + playerHealth);
     }
 	
 }
