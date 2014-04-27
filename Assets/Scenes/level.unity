@@ -636,9 +636,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemies:
-  - {fileID: 100020, guid: 0329f9900cf52e1478b395083fa2a255, type: 3}
-  - {fileID: 100074, guid: 61a80b859f2807747a76514f352272f5, type: 3}
+  - {fileID: 100140, guid: bc600cce01eb57a409f4e69025868a2c, type: 3}
+  - {fileID: 100766, guid: d95c6f63eaedc7e41a4b2e07d5507a8d, type: 2}
   delta: 30
+  enemyCount: 5
 --- !u!4 &1036590421
 Transform:
   m_ObjectHideFlags: 0
