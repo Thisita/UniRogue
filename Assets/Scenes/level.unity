@@ -324,6 +324,32 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!1 &750188751
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100004, guid: 076699d7a4261f149865f1f3a90067cf, type: 2}
+  m_PrefabInternal: {fileID: 2021728737}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 750188752}
+  m_Layer: 0
+  m_Name: firePos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &750188752
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400004, guid: 076699d7a4261f149865f1f3a90067cf, type: 2}
+  m_PrefabInternal: {fileID: 2021728737}
+  m_GameObject: {fileID: 750188751}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1176872053}
 --- !u!1 &766708780
 GameObject:
   m_ObjectHideFlags: 0
@@ -404,9 +430,9 @@ Transform:
   - {fileID: 773373625}
   - {fileID: 1987260407}
   - {fileID: 105397657}
-  - {fileID: 1124935335}
   - {fileID: 1310012088}
   - {fileID: 1529644799}
+  - {fileID: 1124935335}
   m_Father: {fileID: 0}
 --- !u!114 &769337002
 MonoBehaviour:
@@ -887,6 +913,9 @@ MonoBehaviour:
   moveSpeed: 1
   minDistance: 1
   maxDistance: 10
+  gunFireFx: {fileID: 100004, guid: de71c27dabe650a46a35e0cd17c94083, type: 2}
+  firePos: {fileID: 750188752}
+  fireRate: 2
 --- !u!114 &1176872052
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -911,6 +940,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 908937665}
+  - {fileID: 750188752}
   m_Father: {fileID: 0}
 --- !u!54 &1176872054
 Rigidbody:

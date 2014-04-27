@@ -5778,6 +5778,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &100768
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400768}
+  m_Layer: 0
+  m_Name: firePos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &400000
 Transform:
   m_ObjectHideFlags: 1
@@ -10379,12 +10394,24 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100766}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.2397871, y: -2.23216343, z: -2.93215513}
+  m_LocalPosition: {x: 7.7271986, y: -2.23216343, z: -8.17665958}
   m_LocalScale: {x: 1.902426, y: 1.902426, z: 1.902426}
   m_Children:
+  - {fileID: 400768}
   - {fileID: 400028}
   - {fileID: 400764}
   m_Father: {fileID: 0}
+--- !u!4 &400768
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100768}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: .75, z: 0}
+  m_LocalScale: {x: .5256446, y: .5256446, z: .5256446}
+  m_Children: []
+  m_Father: {fileID: 400766}
 --- !u!54 &5400000
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -10442,6 +10469,9 @@ MonoBehaviour:
   moveSpeed: 2
   minDistance: 1
   maxDistance: 10
+  gunFireFx: {fileID: 100004, guid: de71c27dabe650a46a35e0cd17c94083, type: 2}
+  firePos: {fileID: 400768}
+  fireRate: 2
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
