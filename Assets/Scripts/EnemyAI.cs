@@ -12,11 +12,8 @@ public class EnemyAI : MonoBehaviour
 	// Use this for initialization
 	void Start()
     {
-        // Debug
-        if (Debug.isDebugBuild)
-        {
-            Debug.Log("EnemyAI::Start()");
-        }
+        // log
+        Debug.Log("EnemyAI::Start()");
         // Get the player
         player = GameObject.FindGameObjectWithTag("Player");
 	}
@@ -30,22 +27,16 @@ public class EnemyAI : MonoBehaviour
         // should we chase?
         if (Vector3.Distance(transform.position, player.transform.position) >= minDistance)
         {
-            // Debug
-            if (Debug.isDebugBuild)
-            {
-                Debug.Log("EnemyAI::Update() [Chasing]");
-            }
+            // log
+            Debug.Log("EnemyAI::Update() [Chasing]");
             // chase
             transform.position += transform.forward * moveSpeed * Time.deltaTime;
 
             // Can we attack?
             if (Vector3.Distance(transform.position, player.transform.position) <= maxDistance)
             {
-                // Debug
-                if (Debug.isDebugBuild)
-                {
-                    Debug.Log("EnemyAI::Update() [Attacking]");
-                }
+                // log
+                Debug.Log("EnemyAI::Update() [Attacking]");
                 // attack
                 Attack();
             }
@@ -55,11 +46,8 @@ public class EnemyAI : MonoBehaviour
     // Carries out an attack operation on the player
     void Attack()
     {
-        // Debug
-        if (Debug.isDebugBuild)
-        {
-            Debug.Log("EnemyAI::Attack()");
-        }
+        // log
+        Debug.Log("EnemyAI::Attack()");
         // TODO: Implement
     }
 }
