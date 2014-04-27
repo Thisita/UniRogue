@@ -13,6 +13,11 @@ public class EnemySpawnerController : MonoBehaviour
     // Start is caled at first run
     void Start()
     {
+        // Debug
+        if (Debug.isDebugBuild)
+        {
+            Debug.Log("EnemySpawnController::Start()");
+        }
         // set lastTime
         lastTime = Time.time;
     }
@@ -20,6 +25,11 @@ public class EnemySpawnerController : MonoBehaviour
 	// Update is called once per frame
 	void Update()
     {
+        // Debug
+        if (Debug.isDebugBuild)
+        {
+            Debug.Log("EnemySpawnController::Update()");
+        }
         // Test if it is a spawn time
         if ((Time.time - lastTime) >= delta)
         {
