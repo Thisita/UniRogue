@@ -16,9 +16,9 @@ public class PowerUpAction : MonoBehaviour {
 	}
 	void OnTriggerEnter(Collider other)
 	{
-		if (!other.Equals (null)) 
+		if (!other.Equals (null)&&other.name=="Player") 
 		{
-			Debug.Log ("Colliding");
+			Debug.Log("Hit object: " + other.name);
 			switch(type)
 			{
 				case "health":
