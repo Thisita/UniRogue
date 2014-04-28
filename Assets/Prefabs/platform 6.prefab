@@ -2652,8 +2652,10 @@ MonoBehaviour:
   spawnPoint: {fileID: 400070}
   warp: {fileID: 11400010}
   platforms:
-  - {fileID: 100040, guid: 18c9abb2485f9574c84f120b1cf6f118, type: 2}
-  - {fileID: 100040, guid: 18c9abb2485f9574c84f120b1cf6f118, type: 2}
+  - {fileID: 100010, guid: 92ac5cd15189e004ea9e8fae60990d0e, type: 2}
+  - {fileID: 100012, guid: c8a837ccfc7d4ce4d879b427ed5e5954, type: 2}
+  - {fileID: 100078, guid: 87583fd16aebbe44a918bf86621d20df, type: 2}
+  - {fileID: 100034, guid: 15e9b436049f6224989006240e66d438, type: 2}
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
