@@ -25,6 +25,7 @@ public class PowerUpAction : MonoBehaviour {
 				playerhealth.GainHealth(20);
 					break;
 				case "shield":
+				playerhealth.GiveShield(5);
 					break;
 				default:
 					break;

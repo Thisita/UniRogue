@@ -18,12 +18,23 @@ public class PlayerHealth : MonoBehaviour {
 
     public void TakeDamage(float amt)
     {
-        currentHealth -= amt;
+		if (currentShields>amt) {
+			currentShields=currentShields-amt;
+		}
+		else{
+			if (currentShields==0){
+				currentHealth -= amt;
+			}
+			else{
+				currentHealth =currentHealth- amt+currentShields;
+				currentShields=0;
+			}
 
-        if (currentHealth <= 0)
-        {
-            Die();
-        }
+	        if (currentHealth <= 0)
+	        {
+	            Die();
+	        }
+		}
     }
 	public void GainHealth(float amt){
 		currentHealth += amt;
@@ -31,7 +42,9 @@ public class PlayerHealth : MonoBehaviour {
 			currentHealth=100;
 		}
 	}
-
+	public void GiveShield(float amt){
+		currentShields += amt;
+	}
     void Die()
     {
         gameManager.SetGameState(GameManager.GameState.GameOver);
