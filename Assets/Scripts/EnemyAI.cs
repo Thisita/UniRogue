@@ -60,11 +60,6 @@ public class EnemyAI : MonoBehaviour
                 // log
                 //Debug.Log("EnemyAI::Update() [Attacking]");
                 // attack
-                // Play robo attack anim if exists
-                if (roboAnim)
-                {
-                    roboAnim.PlayAnimation(RoboAnimController.RoboAnimation.PunchHighLeft);
-                }
                 Attack();
             }
         }
@@ -86,6 +81,12 @@ public class EnemyAI : MonoBehaviour
         if (cooldown > 0)
         {
             return;
+        }
+
+        // Play robo attack anim if exists
+        if (roboAnim)
+        {
+            roboAnim.PlayAnimation(RoboAnimController.RoboAnimation.PunchHighLeft);
         }
 
         float randomRadius = Random.Range(0, 2.0f);
