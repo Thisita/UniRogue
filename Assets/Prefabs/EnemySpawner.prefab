@@ -39,7 +39,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemies:
-  - {fileID: 100766, guid: d95c6f63eaedc7e41a4b2e07d5507a8d, type: 2}
+  - {fileID: 100000, guid: 4a61b0aed6f362b4187ed1f1c6706038, type: 2}
   - {fileID: 100002, guid: 076699d7a4261f149865f1f3a90067cf, type: 2}
   delta: 10
   minEnemyCount: 1

@@ -784,6 +784,7 @@ ModelImporter:
     4300020: robo_rigg_2014:shoe_R
     4300022: robo_rigg_2014:shoe_L
     4300024: robo_rigg_2014:head
+    9500000: //RootNode
     11100000: //RootNode
     13700000: robo_rigg_2014:leg_1_R
     13700002: robo_rigg_2014:leg_1_L

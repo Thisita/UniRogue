@@ -28,7 +28,7 @@ public class EnemyAI : MonoBehaviour
         gameManager = GameObject.FindObjectOfType<GameManager>();
         try
         {
-            roboAnim = GetComponent<RoboAnimController>();
+            roboAnim = GetComponentInChildren<RoboAnimController>();
         }
         catch (System.Exception) { }
 	}
