@@ -44,15 +44,19 @@ public class GUIController : MonoBehaviour
     void OnPausedGUI()
     {
         GUILayout.BeginArea(new Rect(0.0f, 0.0f, Screen.width, Screen.height));
-        GUILayout.BeginVertical();
-        GUILayout.FlexibleSpace();
         GUILayout.BeginHorizontal();
         GUILayout.FlexibleSpace();
-        GUILayout.Label("Paused");
+        GUILayout.BeginVertical();
         GUILayout.FlexibleSpace();
-        GUILayout.EndHorizontal();
+        GUILayout.Label("Paused");
+        if (GUILayout.Button("Quit"))
+        {
+            Application.Quit();
+        }
         GUILayout.FlexibleSpace();
         GUILayout.EndVertical();
+        GUILayout.FlexibleSpace();
+        GUILayout.EndHorizontal();
         GUILayout.EndArea();
     }
 
@@ -60,15 +64,24 @@ public class GUIController : MonoBehaviour
     void OnGameOverGUI()
     {
         GUILayout.BeginArea(new Rect(0.0f, 0.0f, Screen.width, Screen.height));
-        GUILayout.BeginVertical();
-        GUILayout.FlexibleSpace();
         GUILayout.BeginHorizontal();
         GUILayout.FlexibleSpace();
-        GUILayout.Label("Game Over");
+        GUILayout.BeginVertical();
         GUILayout.FlexibleSpace();
-        GUILayout.EndHorizontal();
+        GUILayout.Label("Game Over");
+        if (GUILayout.Button("Play Again?"))
+        {
+            Application.LoadLevel("level");
+        }
+
+        if (GUILayout.Button("Quit"))
+        {
+            Application.Quit();
+        }
         GUILayout.FlexibleSpace();
         GUILayout.EndVertical();
+        GUILayout.FlexibleSpace();
+        GUILayout.EndHorizontal();
         GUILayout.EndArea();
     }
 }

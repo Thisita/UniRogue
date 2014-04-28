@@ -53,7 +53,10 @@ public class GameManager : MonoBehaviour {
 
         if (state == GameState.GameOver)
         {
-            Application.LoadLevel("level");
+            player.GetComponent<MouseLook>().enabled = false;
+            Camera.main.GetComponent<MouseLook>().enabled = false;
+            Time.timeScale = 0.0f;
+            //Application.LoadLevel("level");
         }
 	}
 
