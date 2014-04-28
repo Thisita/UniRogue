@@ -21,26 +21,29 @@ public class RoboAnimController : MonoBehaviour
 	void Start ()
     {
         anim = GetComponent<Animation>();
-        loop = RoboLoop.Idle;
+        SetLoop(RoboLoop.Idle);
 	}
+
+    // Reset to loop
+    void Update()
+    {
+        if (!anim.isPlaying)
+        {
+            anim.CrossFade(EnumToLoopAnim(loop));
+        }
+    }
 	
 	// Play a anim based on its name
     public void PlayAnimation(RoboAnimation ani)
     {
         anim.CrossFade(EnumToAnim(ani));
-        while (anim.isPlaying)
-        {
-            // do nothing
-            continue;
-        }
-
-        anim.CrossFade(EnumToLoopAnim(loop));
     }
 
     // Set the the loop
     public void SetLoop(RoboLoop lp)
     {
         loop = lp;
+        anim.CrossFade(EnumToLoopAnim(loop));
     }
 
     // convert enum to loop anim

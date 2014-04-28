@@ -16,6 +16,7 @@ public class EnemyAI : MonoBehaviour
     float cooldown = 0;
 
     GameManager gameManager;
+    RoboAnimController roboAnim;
 
 	// Use this for initialization
 	void Start()
@@ -25,6 +26,11 @@ public class EnemyAI : MonoBehaviour
         // Get the player
         player = GameObject.FindGameObjectWithTag("Player");
         gameManager = GameObject.FindObjectOfType<GameManager>();
+        try
+        {
+            roboAnim = GetComponent<RoboAnimController>();
+        }
+        catch (System.Exception) { }
 	}
 	
 	// Update is called once per frame
@@ -41,6 +47,11 @@ public class EnemyAI : MonoBehaviour
             // log
             //Debug.Log("EnemyAI::Update() [Chasing]");
             // chase
+            // Set robo walk loop if exists
+            if (roboAnim)
+            {
+                roboAnim.SetLoop(RoboAnimController.RoboLoop.Walk);
+            }
             transform.position += transform.forward * moveSpeed * Time.deltaTime;
 
             // Can we attack?
@@ -50,6 +61,14 @@ public class EnemyAI : MonoBehaviour
                 //Debug.Log("EnemyAI::Update() [Attacking]");
                 // attack
                 Attack();
+            }
+        }
+        else
+        {
+            // set robo idle loop if exists
+            if (roboAnim)
+            {
+                roboAnim.SetLoop(RoboAnimController.RoboLoop.Idle);
             }
         }
 	}
@@ -62,6 +81,12 @@ public class EnemyAI : MonoBehaviour
         if (cooldown > 0)
         {
             return;
+        }
+
+        // Play robo attack anim if exists
+        if (roboAnim)
+        {
+            roboAnim.PlayAnimation(RoboAnimController.RoboAnimation.PunchHighLeft);
         }
 
         float randomRadius = Random.Range(0, 2.0f);
