@@ -3,6 +3,12 @@ using System.Collections;
 
 public class RoboAnimController : MonoBehaviour
 {
+    public enum RoboLoop
+    {
+        Idle,
+        Walk
+    }
+    RoboLoop loop;
     public enum RoboAnimation
     {
         PunchHighLeft,
@@ -15,6 +21,7 @@ public class RoboAnimController : MonoBehaviour
 	void Start ()
     {
         anim = GetComponent<Animation>();
+        loop = RoboLoop.Idle;
 	}
 	
 	// Play a anim based on its name
@@ -27,7 +34,27 @@ public class RoboAnimController : MonoBehaviour
             continue;
         }
 
-        anim.CrossFade("loop_idle");
+        anim.CrossFade(EnumToLoopAnim(loop));
+    }
+
+    // Set the the loop
+    public void SetLoop(RoboLoop lp)
+    {
+        loop = lp;
+    }
+
+    // convert enum to loop anim
+    string EnumToLoopAnim(RoboLoop ani)
+    {
+        switch (ani)
+        {
+            case RoboLoop.Idle:
+                return "loop_idle";
+            case RoboLoop.Walk:
+                return "loop_walk_funny";
+            default:
+                throw new System.Exception("Wat?");
+        }
     }
 
     // convert enum to anim
