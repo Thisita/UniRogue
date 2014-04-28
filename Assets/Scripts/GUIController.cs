@@ -11,7 +11,7 @@ public class GUIController : MonoBehaviour
 	void Start()
     {
         // Get the game manager
-        gameManager = GetComponent<GameManager>();
+        gameManager = GameObject.FindObjectOfType<GameManager>();
 	}
 	
 	// Creates GUI
