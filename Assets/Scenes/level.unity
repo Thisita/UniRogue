@@ -4342,7 +4342,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75c7e638379918f48ac97d872cbba4b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skin: {fileID: 0}
+  skin: {fileID: 11400000, guid: 719d928cf8cd2fe45aa5a67848d1b759, type: 2}
 --- !u!4 &2146497499
 Transform:
   m_ObjectHideFlags: 0
