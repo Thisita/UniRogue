@@ -16,14 +16,12 @@ public class PowerupController : MonoBehaviour {
 	
 	}
 	public void Generate(Transform t){
-		ParticleSystem powerup = Instantiate (powerups [Random.Range (0, powerups.Length)]) as ParticleSystem;
-		powerup.transform.position = t.position;
-		powerup.Play ();
-		Debug.Log(powerup.duration);
-		Destroy (powerup.gameObject,powerup.duration);
+		if(Random.Range(0,100)>00){
+			ParticleSystem powerup = Instantiate (powerups [0/*Random.Range (0, powerups.Length)*/]) as ParticleSystem;
+			powerup.transform.position = t.position;
+			powerup.Play ();
+			Destroy (powerup.gameObject,powerup.duration);
+		}
 	}
-	void OnTriggerEnter(Collider other)
-	{
-		Debug.Log ("Colliding");
-	}
+
 }

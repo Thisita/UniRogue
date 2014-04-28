@@ -40,7 +40,7 @@ public class PlayerShooting : MonoBehaviour {
 
         hitTransform = FindClosestHitObject(ray, out hitPoint);
 
-        if (hitTransform != null)
+        if (hitTransform != null&& !hitTransform.particleSystem)
         {
             Debug.Log("Hit object: " + hitTransform.name);
 

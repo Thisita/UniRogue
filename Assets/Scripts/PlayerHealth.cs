@@ -23,6 +23,12 @@ public class PlayerHealth : MonoBehaviour {
             Die();
         }
     }
+	public void GainHealth(float amt){
+		currentHealth += amt;
+		if (currentHealth > 100) {
+			currentHealth=100;
+		}
+	}
 
     void Die()
     {
