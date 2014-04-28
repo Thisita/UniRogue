@@ -7,11 +7,12 @@ public class EnemyHealth : MonoBehaviour {
     float currentHitPoints;
 
     GameManager gameManager;
-
+	PowerupController Powerup;
 	// Use this for initialization
 	void Start () {
         currentHitPoints = hitPoints;
         gameManager = GameObject.FindObjectOfType<GameManager>();
+		Powerup = GameObject.FindObjectOfType < PowerupController> ();
 	}
 
     public void TakeDamage(float amt)
@@ -26,8 +27,10 @@ public class EnemyHealth : MonoBehaviour {
 
     void Die()
     {
-        if (gameManager.GetNumEneimesToKill() > 0)
-            gameManager.DecreaseEnemies(1);
+        if (gameManager.GetNumEneimesToKill () > 0) {
+			gameManager.DecreaseEnemies (1);
+			Powerup.Generate(gameObject.transform);
+		}
         Destroy(gameObject);
     }
 
