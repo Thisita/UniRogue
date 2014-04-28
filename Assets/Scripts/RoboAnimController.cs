@@ -21,7 +21,7 @@ public class RoboAnimController : MonoBehaviour
 	void Start ()
     {
         anim = GetComponent<Animation>();
-        loop = RoboLoop.Idle;
+        SetLoop(RoboLoop.Idle);
 	}
 	
 	// Play a anim based on its name
@@ -41,6 +41,7 @@ public class RoboAnimController : MonoBehaviour
     public void SetLoop(RoboLoop lp)
     {
         loop = lp;
+        anim.CrossFade(EnumToLoopAnim(loop));
     }
 
     // convert enum to loop anim
