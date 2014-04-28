@@ -412,57 +412,6 @@ Light:
   m_ShadowAngle: 0
   m_IndirectIntensity: 1
   m_AreaSize: {x: 1, y: 1}
-<<<<<<< HEAD
---- !u!1001 &619663540
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 400010, guid: 92ac5cd15189e004ea9e8fae60990d0e, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 128.5448
-      objectReference: {fileID: 0}
-    - target: {fileID: 400010, guid: 92ac5cd15189e004ea9e8fae60990d0e, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -3.74739456
-      objectReference: {fileID: 0}
-    - target: {fileID: 400010, guid: 92ac5cd15189e004ea9e8fae60990d0e, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -10.7948923
-      objectReference: {fileID: 0}
-    - target: {fileID: 400010, guid: 92ac5cd15189e004ea9e8fae60990d0e, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400010, guid: 92ac5cd15189e004ea9e8fae60990d0e, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400010, guid: 92ac5cd15189e004ea9e8fae60990d0e, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400010, guid: 92ac5cd15189e004ea9e8fae60990d0e, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400004, guid: 92ac5cd15189e004ea9e8fae60990d0e, type: 2}
-      propertyPath: platforms.Array.data[1]
-      value: 
-      objectReference: {fileID: 100010, guid: 92ac5cd15189e004ea9e8fae60990d0e, type: 2}
-    - target: {fileID: 6500006, guid: 92ac5cd15189e004ea9e8fae60990d0e, type: 2}
-      propertyPath: m_Size.x
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 92ac5cd15189e004ea9e8fae60990d0e, type: 2}
-  m_RootGameObject: {fileID: 769337000}
-  m_IsPrefabParent: 0
-  m_IsExploded: 1
-=======
->>>>>>> b33fda94a6b2dc8f0e24bbc6cd220955a07d4630
 --- !u!1 &643813965
 GameObject:
   m_ObjectHideFlags: 0
