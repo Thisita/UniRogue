@@ -43,6 +43,7 @@ public class GUIController : MonoBehaviour
     // Render paused GUI
     void OnPausedGUI()
     {
+        GUILayout.BeginArea(new Rect(0.0f, 0.0f, Screen.width, Screen.height));
         GUILayout.BeginVertical();
         GUILayout.FlexibleSpace();
         GUILayout.BeginHorizontal();
@@ -52,11 +53,13 @@ public class GUIController : MonoBehaviour
         GUILayout.EndHorizontal();
         GUILayout.FlexibleSpace();
         GUILayout.EndVertical();
+        GUILayout.EndArea();
     }
 
     // Render paused GUI
     void OnGameOverGUI()
     {
+        GUILayout.BeginArea(new Rect(0.0f, 0.0f, Screen.width, Screen.height));
         GUILayout.BeginVertical();
         GUILayout.FlexibleSpace();
         GUILayout.BeginHorizontal();
@@ -66,5 +69,6 @@ public class GUIController : MonoBehaviour
         GUILayout.EndHorizontal();
         GUILayout.FlexibleSpace();
         GUILayout.EndVertical();
+        GUILayout.EndArea();
     }
 }
