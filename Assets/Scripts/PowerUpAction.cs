@@ -3,10 +3,10 @@ using System.Collections;
 
 public class PowerUpAction : MonoBehaviour {
 	public string type;
-	PlayerHealth gameManager;
+	PlayerHealth playerhealth;
 	// Use this for initialization
 	void Start () {
-		gameManager = GameObject.FindObjectOfType<PlayerHealth>();
+		playerhealth = GameObject.FindObjectOfType<PlayerHealth>();
 	
 	}
 	
@@ -22,7 +22,7 @@ public class PowerUpAction : MonoBehaviour {
 			switch(type)
 			{
 				case "health":
-				gameManager.GainHealth(20);
+				playerhealth.GainHealth(20);
 					break;
 				case "shield":
 					break;
