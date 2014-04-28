@@ -4,6 +4,7 @@ using System.Collections;
 public class PlayerHealth : MonoBehaviour {
 
     public float playerHealth = 100f;
+    float currentShields;
     float currentHealth;
 
     GameManager gameManager;
@@ -12,6 +13,7 @@ public class PlayerHealth : MonoBehaviour {
 	void Start () {
         gameManager = GameObject.FindObjectOfType<GameManager>();
         currentHealth = playerHealth;
+        currentShields = 0;
 	}
 
     public void TakeDamage(float amt)
@@ -31,7 +33,19 @@ public class PlayerHealth : MonoBehaviour {
 
     void OnGUI()
     {
-        GUI.Box(new Rect(10, 10, 160, 25), "Player Health: " + currentHealth + "/" + playerHealth);
+        GUIStyle gs = GUI.skin.GetStyle("Box");
+        gs.alignment = TextAnchor.MiddleLeft;
+
+        if (currentShields == 0)
+        {
+            GUI.Box(new Rect(10, 10, 150, 25), "Player Health: " + currentHealth + "/" + playerHealth, gs);
+        }
+        else
+        {
+            GUI.Box(new Rect(10, 10, 150, 50), "Player Health: " + currentHealth + "/" + playerHealth + "\nPlayer Shields: " + currentShields, gs);
+        }
+
+        gs.alignment = TextAnchor.MiddleCenter;
     }
 	
 }
